@@ -14,14 +14,14 @@ banana = apples + 4 # код тут
 print(f"яблук = {apples}, бананов = {banana}\n")
 
 # task 04 == виправте назви змінних
-storona_1 = 1
-storona_2 = 2
-storona_3 = 3
-storona_4 = 4
+storona_01 = 1
+storona_02 = 2
+storona_03 = 3
+storona_04 = 4
 
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
-perimetery = storona_1 + storona_2 + storona_3 + storona_4
+perimetery = storona_01 + storona_02 + storona_03 + storona_04
 print(perimetery)
 print(f"Періметр дорівнює {perimetery}\n")
 
