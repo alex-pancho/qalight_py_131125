@@ -24,8 +24,6 @@ storona_04 = 4
 perimetery = storona_01 + storona_02 + storona_03 + storona_04
 print(perimetery)
 print(f"Періметр дорівнює {perimetery}\n")
-
-
 """
     # Задачі 06 -10:
     # Переведіть задачі з книги "Математика, 2 клас"
@@ -68,9 +66,9 @@ pear_01 = 5
 plum_01 = apple - 2
 pear_02 = apple + 5
 plum_02 = apple - 2
-sum = apple + pear_2 + plum_2
+sum = apple + pear_02 + plum_02
 trees = "дерев"
-print(f"У саду посадили {apple} яблуні. Груш на {pear_1} більше яблунь, а слив - на {plum_1} менше.")
+print(f"У саду посадили {apple} яблуні. Груш на {pear_01} більше яблунь, а слив - на {plum_01} менше.")
 print(f"Скільки всього {trees} посадили в саду?")
 print(f"Відповідь...")
 print(f"Сума всіх дерев в саду дорівнює {sum}\n")
