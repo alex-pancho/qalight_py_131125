@@ -64,10 +64,10 @@ print(f"Сума всіх марок, що лишились {sum}\n")
 Скільки всього дерев посадили в саду?
 """
 apple = 4
-pear_1 = 5
-plum_1 = apple - 2
-pear_2 = apple + 5
-plum_2 = apple - 2
+pear_01 = 5
+plum_01 = apple - 2
+pear_02 = apple + 5
+plum_02 = apple - 2
 sum = apple + pear_2 + plum_2
 trees = "дерев"
 print(f"У саду посадили {apple} яблуні. Груш на {pear_1} більше яблунь, а слив - на {plum_1} менше.")
