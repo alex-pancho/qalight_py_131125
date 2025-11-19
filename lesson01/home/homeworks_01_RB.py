@@ -79,18 +79,18 @@ print(f"Сума всіх дерев в саду дорівнює {sum}\n")
 Після обіду температура опустилася на 10 градусів.
 Надвечір потепліло на 4 градуси. Яка температура надвечір?
 """
-temperature = "температура"
+temp = "температура"
 degrees = "градусів"
-temperature_1 = 5
+temp_1 = 5
 null = 0
-temperature_2 = 10
-temperature_3 = 4
-late_evening = null + temperature_1 - temperature_2 + temperature_3
-print(f"До обіда {temperature} повітря була на {temperature_1} {degrees} вище нуля.")
-print(f"Після обіду {temperature} опустилася на {temperature_2} {degrees}.")
-print(f"Надвечір потепліло на {temperature_3} градуси. Яка {temperature} надвечір?")
+temp_2 = 10
+temp_3 = 4
+late_evening = null + temp_1 - temp_2 + temp_3
+print(f"До обіда {temp} повітря була на {temp_1} {degrees} вище нуля.")
+print(f"Після обіду {temp} опустилася на {temp_2} {degrees}.")
+print(f"Надвечір потепліло на {temp_3} градуси. Яка {temp} надвечір?")
 print(f"Відповідь...")
-print(f"Надвечір {temperature} дорівнює {late_evening} {degrees}\n")
+print(f"Надвечір {temp} дорівнює {late_evening} {degrees}\n")
 
 # task 09
 """
