@@ -1,28 +1,28 @@
 # task 01 == Виправте синтаксичні помилки
 print("Hello", end = " ")
-    print("world!")
+print("world!")
 
 # task 02  == Виправте назви змінних, щоб текст виводався
 hello = "Hello"
 world = "world"
-print(f"{helo} {word}!")
+print(f"{hello} {world}!")
 
 # task 03 == Зробіть так, щоб кількість бананів була
 # завжди на чотири штуки більша, ніж яблук
 apples = 2
-banana = # код тут
+banana = apples + 4 
 
 
 # task 04 == виправте назви змінних
-1_storona = 1
-?torona_2 = 2
-сторона_3 = 3
-$torona_4 = 4
+storona_1 = 1
+storona_2 = 2
+storona_3 = 3
+storona_4 = 4
 
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
-perimetery = ? + ? + ? + ?
-print()
+perimetery = storona_1 + storona_2 + storona_3 + storona_4
+print(perimetery)
 
 
 """
@@ -40,12 +40,22 @@ print()
 1 марку із серії «Звірі» вона подарувала подружці. 
 Скільки марок лишилось у Оксани?
 """
+art = 20
+animal = 7
+art_left = art - 5
+animal_left = animal - 1
+print("Марок із серії «Мистецтво» лишилося", art_left, ", а марок із серії «Звірі» -", animal_left,)
 
 # task 07
 """
 У саду посадили 4 яблуні. Груш на 5 більше яблунь, а слив - на 2 менше.
 Скільки всього дерев посадили в саду?
 """
+apples = 4
+pears = apples + 5
+plums = apples - 2
+trees = apples + pears + plums
+print(trees)
 
 # task 08
 """
@@ -53,6 +63,10 @@ print()
 Після обіду температура опустилася на 10 градусів.
 Надвечір потепліло на 4 градуси. Яка температура надвечір?
 """
+morning_t = 5
+afternoon_t = morning_t - 10
+evening_t = afternoon_t + 4
+print(evening_t)
 
 # task 09
 """
@@ -60,6 +74,12 @@ print()
 1 хлопчик захворів та 2 дівчинки не прийшли сьогодні.
 Скількі сьогодні дітей у театральному гуртку?
 """
+boys = 24
+girls = boys / 2
+boys_today = boys - 1
+girls_today = girls - 2
+all = int(boys_today + girls_today)
+print(all)
 
 # task 10
 """
@@ -67,5 +87,8 @@ print()
 а третя - як половина вартості першої та другої разом.
 Скільки будуть коштувати усі книги, якщо купити по одному примірнику?
 """
-
-print("lalala")
+book_1 = 8
+book_2 = book_1 + 2
+book_3 = (book_1 + book_2) / 2
+sum = int(book_1 + book_2 + book_3)
+print(sum)
