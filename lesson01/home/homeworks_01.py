@@ -22,7 +22,7 @@ storona_4 = 4
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
 perimetery = storona_1 + storona_2 + storona_3 + storona_4
-print(perimetery)
+print("Периметр фігури становить", perimetery)
 
 
 """
@@ -44,7 +44,7 @@ art = 20
 animal = 7
 art_left = art - 5
 animal_left = animal - 1
-print("Марок із серії «Мистецтво» лишилося", art_left, ", а марок із серії «Звірі» -", animal_left,)
+print("Марок із серії «Мистецтво» лишилося", art_left, ", а марок із серії «Звірі» -", animal_left)
 
 # task 07
 """
@@ -55,7 +55,7 @@ apples = 4
 pears = apples + 5
 plums = apples - 2
 trees = apples + pears + plums
-print(trees)
+print("Всього в саду посадили", trees, "дерев.")
 
 # task 08
 """
@@ -66,7 +66,7 @@ print(trees)
 morning_t = 5
 afternoon_t = morning_t - 10
 evening_t = afternoon_t + 4
-print(evening_t)
+print("Надвечір температура повітря становить", evening_t, "градусів.")
 
 # task 09
 """
@@ -79,7 +79,7 @@ girls = boys / 2
 boys_today = boys - 1
 girls_today = girls - 2
 all = int(boys_today + girls_today)
-print(all)
+print("В театральному гуртку сьогодні", all, "дітей.")
 
 # task 10
 """
@@ -91,4 +91,4 @@ book_1 = 8
 book_2 = book_1 + 2
 book_3 = (book_1 + book_2) / 2
 sum = int(book_1 + book_2 + book_3)
-print(sum)
+print("Якщо купити по одному примірнику всіх книг, загальна сума становитиме", sum, "гривень.")
