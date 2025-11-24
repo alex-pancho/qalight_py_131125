@@ -1,29 +1,29 @@
 # task 01 == Виправте синтаксичні помилки
 print("Hello", end = " ")
-    print("world!")
+print("world!")
 
 # task 02  == Виправте назви змінних, щоб текст виводався
 hello = "Hello"
 world = "world"
-print(f"{helo} {word}!")
+print(f"{hello} {world}!\n")
 
 # task 03 == Зробіть так, щоб кількість бананів була
 # завжди на чотири штуки більша, ніж яблук
 apples = 2
-banana = # код тут
-
+banana = apples + 4 # код тут
+print(f"яблук = {apples}, бананов = {banana}\n")
 
 # task 04 == виправте назви змінних
-1_storona = 1
-?torona_2 = 2
-сторона_3 = 3
-$torona_4 = 4
+storona_1 = 1
+storona_2 = 2
+storona_3 = 3
+storona_4 = 4
 
 # task 05 == Порахуйте периметр фігури з task 04
 # та виведіть його для користувача
-perimetery = ? + ? + ? + ?
-print()
-
+perimetery = storona_1 + storona_2 + storona_3 + storona_4
+print(perimetery)
+print(f"Періметр дорівнює {perimetery}\n")
 
 """
     # Задачі 06 -10:
@@ -40,12 +40,39 @@ print()
 1 марку із серії «Звірі» вона подарувала подружці. 
 Скільки марок лишилось у Оксани?
 """
+art = 20
+animal = 7
+art_2 = 5
+animal_2 = 1
+art_3 = art - art_2
+animal_3 = animal - animal_2
+sum = art_3 + animal_3
+print(f"У Оксани було {art} марок із серії «Мистецтво»")
+print(f"і {animal} марок із серії «Звірі».")
+print(f"{art_2} марок із серії «Мистецтво» та")
+print(f"{animal_2} марку із серії «Звірі» вона подарувала подружці.")
+print(f"Скільки марок лишилось у Оксани?")
+print(f"Відповідь...")
+print(f"Марок «Мистецтво» лишилось {art_3}")
+print(f"Марок «Звірі» лишилось {animal_3}")
+print(f"Сума всіх марок, що лишились {sum}\n")
 
 # task 07
 """
 У саду посадили 4 яблуні. Груш на 5 більше яблунь, а слив - на 2 менше.
 Скільки всього дерев посадили в саду?
 """
+apple = 4
+pear_1 = 5
+plum_1 = apple - 2
+pear_2 = apple + 5
+plum_2 = apple - 2
+sum = apple + pear_2 + plum_2
+trees = "дерев"
+print(f"У саду посадили {apple} яблуні. Груш на {pear_1} більше яблунь, а слив - на {plum_1} менше.")
+print(f"Скільки всього {trees} посадили в саду?")
+print(f"Відповідь...")
+print(f"Сума всіх дерев в саду дорівнює {sum}\n")
 
 # task 08
 """
@@ -53,6 +80,18 @@ print()
 Після обіду температура опустилася на 10 градусів.
 Надвечір потепліло на 4 градуси. Яка температура надвечір?
 """
+temperature = "температура"
+degrees = "градусів"
+temperature_1 = 5
+null = 0
+temperature_2 = 10
+temperature_3 = 4
+late_evening = null + temperature_1 - temperature_2 + temperature_3
+print(f"До обіда {temperature} повітря була на {temperature_1} {degrees} вище нуля.")
+print(f"Після обіду {temperature} опустилася на {temperature_2} {degrees}.")
+print(f"Надвечір потепліло на {temperature_3} градуси. Яка {temperature} надвечір?")
+print(f"Відповідь...")
+print(f"Надвечір {temperature} дорівнює {late_evening} {degrees}\n")
 
 # task 09
 """
@@ -60,6 +99,19 @@ print()
 1 хлопчик захворів та 2 дівчинки не прийшли сьогодні.
 Скількі сьогодні дітей у театральному гуртку?
 """
+boys  = 24
+girls = 12
+fell_ill_boy = 1
+did_not_come_girl = 2
+boys_2  = boys - 1
+girls_2 = girls - 2
+total_children = boys_2 + girls_2
+less = "вдвічі менше"
+print(f"Взагалі у театральному гуртку - {boys} хлопчики, а дівчаток - {less}.")
+print(f"{fell_ill_boy} хлопчик захворів та {did_not_come_girl} дівчинки не прийшли сьогодні.")
+print(f"Скількі сьогодні дітей у театральному гуртку?")
+print(f"Відповідь...")
+print(f"Сьогодні {total_children} дітей у театральному гуртку\n")
 
 # task 10
 """
@@ -67,5 +119,14 @@ print()
 а третя - як половина вартості першої та другої разом.
 Скільки будуть коштувати усі книги, якщо купити по одному примірнику?
 """
+book_1  = 8
+book_2 = book_1 + 2
+book_3 = (book_1 + book_2)/2
+sum_books = book_1 + book_2 + book_3
+print(f"Перша книжка коштує {book_1} грн., друга - на 2 грн. дороже,")
+print(f"а третя - як половина вартості першої та другої разом.")
+print(f"Скільки будуть коштувати усі книги, якщо купити по одному примірнику?")
+print(f"Відповідь...")
+print(f"Усі книги, якщо купити по одному примірнику, будуть коштувати {sum_books} грн.")
 
-print("lalala")
+

@@ -81,6 +81,7 @@ hello = "Привіт"
 its_len = hello.__len__() # a
 print(its_len)
 
+
 print(len(hello)) # a
 
 zminna_a = "a"; zminna_b = "b"
