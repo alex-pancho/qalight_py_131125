@@ -9,34 +9,46 @@ print("Створіть змінні: student_name, student_age, is_enrolled, gp
 print("Приклад: student_name = 'Іван Петров'")
 
 # Ваш код тут:
-student_name = ""  # Замініть на ваше ім'я
-student_age = 0    # Замініть на ваш вік
-is_enrolled = False # Замініть на True якщо навчаєтеся
-gpa_score = 0.0    # Замініть на ваш середній бал
+student_name = "Наталія"  # Замініть на ваше ім'я
+student_age = 36    # Замініть на ваш вік
+is_enrolled = True # Замініть на True якщо навчаєтеся
+gpa_score = 10.0    # Замініть на ваш середній бал
 
 # ЗАВДАННЯ 2: Арифметичні операції
 print("\nЗавдання 2: Виконайте арифметичні операції")
 print("Обчисліть результати операцій з числами 25 та 4")
 
 # Ваш код тут:
-addition_result = 0      # 25 + 4
-subtraction_result = 0   # 25 - 4
-multiplication_result = 0 # 25 * 4
-division_result = 0      # 25 / 4
-floor_division_result = 0 # 25 // 4
-modulo_result = 0        # 25 % 4
-power_result = 0         # 25 ** 4
+addition_result = 25 + 4      # 25 + 4
+subtraction_result = 25 -4   # 25 - 4
+multiplication_result = 25 * 4 # 25 * 4
+division_result = 25 / 4      # 25 / 4
+floor_division_result = 25 // 4 # 25 // 4
+modulo_result = 25 % 4        # 25 % 4
+power_result = 25 ** 4         # 25 ** 4
+print(addition_result)
+print(subtraction_result)
+print(multiplication_result)
+print(division_result)
+print(floor_division_result)
+print(modulo_result)
+print(power_result)
 
 # ЗАВДАННЯ 3: Робота з рядками
 print("\nЗавдання 3: Обробіть рядок 'Python Programming Language'")
 text = "Python Programming Language"
 
 # Ваш код тут:
-first_char = ""          # Перший символ
-last_char = ""           # Останній символ
-text_length = 0          # Довжина рядка
-first_word = ""          # Перше слово (індекси 0-5)
-last_word = ""           # Останнє слово (індекси 19-26)
+first_char = text[0]          # Перший символ
+last_char = text[-1]           # Останній символ
+text_length = len(text)          # Довжина рядка
+first_word = text[0:6]          # Перше слово (індекси 0-5)
+last_word = text[19:27]           # Останнє слово (індекси 19-26)
+print(first_char)
+print(last_char)
+print(text_length)
+print(first_word)
+print(last_word)
 
 # ЗАВДАННЯ 4: Форматування рядків
 print("\nЗавдання 4: Створіть форматовані рядки")
@@ -45,15 +57,24 @@ age = 22
 height = 1.65
 
 # Ваш код тут (використайте f-strings):
-greeting = ""            # "Привіт, мене звати Марія"
-age_info = ""            # "Мені 22 роки"
-height_info = ""         # "Мій зріст 1.65 м"
+greeting = f'Привіт, мене звати {name}'            # "Привіт, мене звати Марія"
+age_info = f'Мені {age} роки'            # "Мені 22 роки"
+height_info = f'Мій зріст {height} м'         # "Мій зріст 1.65 м"
+print(greeting)
+print(age_info)
+print(height_info)
 
 # ЗАВДАННЯ 5: Конвертація типів
 print("\nЗавдання 5: Конвертуйте типи даних")
 str_number = "123"
+int_number = int(str_number)
 str_float = "45.67"
+float_number = float(str_float)
 number = 89
+str_number = str(number)
+print(int_number)
+print(float_number)
+print(str_number)
 
 # Ваш код тут:
 converted_int = 0        # str_number у int
