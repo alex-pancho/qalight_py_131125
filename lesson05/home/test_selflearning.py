@@ -160,7 +160,7 @@ class TestStudentCode(unittest.TestCase):
         
         test_cases = [
             (['4'], "парне"),
-            (['7'], "непарне"),
+            (['7'], "не парне"),
             (['0'], "парне")
         ]
         
