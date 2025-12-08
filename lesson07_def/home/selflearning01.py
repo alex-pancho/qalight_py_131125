@@ -96,6 +96,8 @@ def join_with_me(*args, separator=":"):
 # "[ a = 1 ] ; [ b = 2 ]"
 def format_options(**kwargs):
     # Ваш код тут
+    prefix = kwargs.pop("prefix", "Value")
+    
     return 
 # -------------------------------------------------------------------------------------
 
