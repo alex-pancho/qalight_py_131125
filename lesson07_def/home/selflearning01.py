@@ -103,10 +103,14 @@ print(join_with_me(1, 2, 3, separator=","))
 print("\nTask_5")
 def format_options(**kwargs):
     # Ваш код тут
-    prefix = kwargs.get("prefix", "Value")
-    suffix = kwargs.get("suffix", "")
-    return " ; ".join(f"{prefix} {k} = {v} {suffix}".strip()
-                      for k, v in kwargs.items() if k not in ("prefix", "suffix"))
+    prefix = kwargs.pop("prefix", "Value")
+    suffix = kwargs.pop("suffix", "")
+    separator = kwargs.pop("separator", " ; ")
+    outlist = []
+    for key, value in kwargs.items():
+        outstring = f" {prefix} {key} = {value} {suffix}"
+        outlist.append(outstring)
+    return separator.join(outlist)
 print(format_options(a=1, b=2, prefix="[", suffix="]"))
 
 # -------------------------------------------------------------------------------------
