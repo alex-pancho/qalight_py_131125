@@ -135,15 +135,20 @@ print(format_options(a=1, b=2, prefix="[", suffix="]"))
 # повинна повернути: "Cities: Item: Kyiv, Item: Lviv"
 # ПОРАДА-ПІДКАЗКА: можливо допоможе використання функцій з завдань 4 та 5
 print("\nTask_6")
-def format_data(main_title, *items, **options):
+def format_data(main_title, *items, **kwargs):
     # Ваш код тут
-    separator = options.get("separator", ", ")
-    prefix = options.get("prefix", "Item")
-    formatted_items = [f"{prefix}: {item}" for item in items]
-    return f"{main_title}: " + separator.join(formatted_items)
-
-print(format_data("Products", "Apple", "Banana", separator=" | ", prefix="Fruit"))
-print(format_data("Cities", "Kyiv", "Lviv"))
+    prefix = kwargs.pop("prefix", "item")
+    suffix = kwargs.pop("suffix", "")
+    separator = kwargs.pop("separator", ", ")
+    outlist = []
+    for item in items:
+        outstring = f"{prefix}: {item}"
+        outlist.append(outstring)
+    return f"{main_title}: " + separator.join(outlist)
+out = format_data("Products", "Apple", "Banana", separator=" | ", prefix="Fruit")
+print(out)
+out_2 = format_data("Cities", "Kyiv", "Lviv")
+print(out_2)
 
 # -------------------------------------------------------------------------------------
 # Завдання 7: Лямбда-функції
