@@ -22,8 +22,7 @@ sum_numbers_in_list("21")  # ValueError
 #             pass
 #         except ValueError as e:
 #             result.append("Не можу це зробити!")
-#
-#     return result
+##     return result
 print("\nTask_8\n")
 def sum_numbers_in_list(string_list: list):
     """Повертає список сум чисел зі списку рядків,
