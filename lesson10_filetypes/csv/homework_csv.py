@@ -1,28 +1,27 @@
 import csv
 from pathlib import Path
 
-
 def read_file(filepath: Path) -> list:
     with open(filepath, "r", encoding="utf-8") as file:
         reader = csv.reader(file)
         rows = list(reader)
         
-        # if not rows:
-        #     return []
+        if not rows:
+            return []
         
-        # # First row contains headers
-        # headers = rows[0]
+        # First row contains headers
+        headers = rows[0]
         
-        # # Convert remaining rows to dictionaries
-        # result = []
-        # for row in rows[1:]:
-        #     # Handle rows with different lengths than headers
-        #     row_dict = {}
-        #     for i, header in enumerate(headers):
-        #         row_dict[header] = row[i] if i < len(row) else ""
-        #     result.append(row_dict)
+        # Convert remaining rows to dictionaries
+        result = []
+        for row in rows[1:]:
+            # Handle rows with different lengths than headers
+            row_dict = {}
+            for i, header in enumerate(headers):
+                row_dict[header] = row[i] if i < len(row) else ""
+            result.append(row_dict)
         
-        return rows
+        return result
 
 def write_csv(filepath: Path, content: list):
     if not content:
@@ -44,6 +43,7 @@ def write_csv(filepath: Path, content: list):
 if __name__ == "__main__":
     my_csv = Path(__file__).parent / "users_1.csv"
     content = read_file(my_csv)
-    print(content, type(content))
-    # my_csv_2 = Path(__file__).parent / "new2.csv"
-    # write_csv(my_csv_2, content)
+    print(f'Прочитані дані:', content, type(content))
+    my_csv_2 = Path(__file__).parent / "new2.csv"
+    write_csv(my_csv_2, content)
+    print(f'Дані успішно записані в файл', my_csv_2.name)
