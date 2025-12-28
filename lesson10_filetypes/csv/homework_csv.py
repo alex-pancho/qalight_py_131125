@@ -2,48 +2,45 @@ import csv
 from pathlib import Path
 
 
-def read_file(filepath: Path) -> list:
-    with open(filepath, "r", encoding="utf-8") as file:
+def read_csv(filepath: Path) -> list[list[str]]:
+    with open(filepath, "r", encoding="utf-8", newline="") as file:
         reader = csv.reader(file)
-        rows = list(reader)
-        
-        # if not rows:
-        #     return []
-        
-        # # First row contains headers
-        # headers = rows[0]
-        
-        # # Convert remaining rows to dictionaries
-        # result = []
-        # for row in rows[1:]:
-        #     # Handle rows with different lengths than headers
-        #     row_dict = {}
-        #     for i, header in enumerate(headers):
-        #         row_dict[header] = row[i] if i < len(row) else ""
-        #     result.append(row_dict)
-        
-        return rows
+        return list(reader)
 
-def write_csv(filepath: Path, content: list):
-    if not content:
-        return
-    
+
+def write_csv(filepath: Path, rows: list[list[str]]) -> None:
     with open(filepath, "w", encoding="utf-8", newline="") as file:
         writer = csv.writer(file)
-        
-        # Extract headers from first dictionary
-        headers = list(content[0].keys())
-        writer.writerow(headers)
-        
-        # Write data rows
-        for row_dict in content:
-            row = [row_dict.get(header, "") for header in headers]
-            writer.writerow(row)
+        writer.writerows(rows)
+
+
+def remove_duplicates(rows: list[list[str]]) -> list[list[str]]:
+    seen = set()
+    unique_rows = []
+
+    for row in rows:
+        row_tuple = tuple(row)  # список → кортеж (для set)
+        if row_tuple not in seen:
+            seen.add(row_tuple)
+            unique_rows.append(row)
+
+    return unique_rows
 
 
 if __name__ == "__main__":
-    my_csv = Path(__file__).parent / "users_1.csv"
-    content = read_file(my_csv)
-    print(content, type(content))
-    # my_csv_2 = Path(__file__).parent / "new2.csv"
-    # write_csv(my_csv_2, content)
+    base_path = Path(__file__).parent
+
+    file_1 = base_path / "users_1.csv"
+    file_2 = base_path / "users_2.csv"
+    output_file = base_path / "clean_users_3.csv"
+
+    rows_1 = read_csv(file_1)
+    rows_2 = read_csv(file_2)
+
+    all_rows = rows_1 + rows_2
+    clean_rows = remove_duplicates(all_rows)
+
+    write_csv(output_file, clean_rows)
+
+    print(f"Було рядків: {len(all_rows)}")
+    print(f"Після очищення: {len(clean_rows)}")
