@@ -2,7 +2,9 @@
 Тести для файлу tasks.py
 Запуск: pytest test_tasks.py
 """
-from functions_for_test import *
+import pytest
+from functions_for_test import (add, is_even, reverse_string, find_min, contains_substring, factorial, divide,
+is_palindrome, sum_list, to_upper)
 
 """
 📝 Завдання 1. Перевірка додавання чисел 
@@ -11,8 +13,11 @@ from functions_for_test import *
 """
 def test_add():
     # TODO: додай тести для функції add
-    pass
-
+    # pass
+    assert add(2, 3) == 5
+    assert add(-2, -3) == -5
+    assert add(0, 5) == 5
+    assert add(0, 0) == 0
 
 """
 📝 Завдання 2. Перевірка парності 
@@ -21,8 +26,11 @@ def test_add():
 """
 def test_is_even():
     # TODO: додай тести для функції is_even
-    pass
-
+    # pass
+    assert is_even(4) is True
+    assert is_even(7) is False
+    assert is_even(-2) is True
+    assert is_even(-3) is False
 
 """
 📝 Завдання 3. Розворот рядка 
@@ -31,8 +39,11 @@ def test_is_even():
 """
 def test_reverse_string():
     # TODO: додай тести для функції reverse_string
-    pass
-
+    # pass
+    assert reverse_string("hello") == "olleh"
+    assert reverse_string("") == ""
+    assert reverse_string("a") == "a"
+    assert reverse_string("tenet") == "tenet"
 
 """
 📝 Завдання 4. Мінімум у списку 
@@ -41,8 +52,10 @@ def test_reverse_string():
 """
 def test_find_min():
     # TODO: додай тести для функції find_min
-    pass
-
+    # pass
+    assert find_min([3, 1, 5, 2]) == 1
+    assert find_min([8]) == 8
+    assert find_min([-5, -1, -10]) == -10
 
 """
 📝 Завдання 5. Перевірка підрядка 
@@ -51,8 +64,10 @@ def test_find_min():
 """
 def test_contains_substring():
     # TODO: додай тести для функції contains_substring
-    pass
-
+    # pass
+    assert contains_substring("hello world", "world") is True
+    assert contains_substring("hello world", "python") is False
+    assert contains_substring("hello", "") is True
 
 """
 📝 Завдання 6. Факторіал 
@@ -61,8 +76,13 @@ def test_contains_substring():
 """
 def test_factorial():
     # TODO: додай тести для функції factorial
-    pass
-
+    # pass
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(5) == 120
+    with pytest.raises(ValueError):
+        factorial(-5)
+    #pass
 
 """
 📝 Завдання 7. Ділення з винятком 
@@ -71,8 +91,11 @@ def test_factorial():
 """
 def test_divide():
     # TODO: додай тести для функції divide
-    pass
-
+    # pass
+    assert divide(10, 2) == 5
+    assert divide(10, -2) == -5
+    with pytest.raises(ValueError):
+        divide(10, 0)
 
 """
 📝 Завдання 8. Паліндром 
@@ -81,8 +104,10 @@ def test_divide():
 """
 def test_is_palindrome():
     # TODO: додай тести для функції is_palindrome
-    pass
-
+    # pass
+    assert is_palindrome("tenet") is True
+    assert is_palindrome("hello") is False
+    assert is_palindrome("") is True
 
 """
 📝 Завдання 9. Сума елементів списку 
@@ -91,8 +116,10 @@ def test_is_palindrome():
 """
 def test_sum_list():
     # TODO: додай тести для функції sum_list
-    pass
-
+    # pass
+    assert sum_list([1, 2, 3]) == 6
+    assert sum_list([]) == 0
+    assert sum_list([-1, -2, 3]) == 0
 
 """
 📝 Завдання 10. Конвертація в верхній регістр 
@@ -101,4 +128,231 @@ def test_sum_list():
 """
 def test_to_upper():
     # TODO: додай тести для функції to_upper
-    pass
+    # pass
+    assert to_upper("hello") == "HELLO"
+    assert to_upper("HELLO") == "HELLO"
+    assert to_upper("") == ""
+
+
+
+
+
+
+
+
+'''
+
+## ✅ 1. Тест для `add(a, b)`
+
+### Логіка
+
+Перевіряємо:
+
+* додатні числа
+* від’ємні
+* нуль
+
+```python
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-2, -3) == -5
+    assert add(0, 5) == 5
+    assert add(0, 0) == 0
+```
+
+---
+
+## ✅ 2. Тест для `is_even(n)`
+
+### Логіка
+
+* парне → True
+* непарне → False
+* від’ємні теж важливі
+
+```python
+def test_is_even():
+    assert is_even(4) is True
+    assert is_even(7) is False
+    assert is_even(-2) is True
+    assert is_even(-3) is False
+```
+
+---
+
+## ✅ 3. Тест для `reverse_string(s)`
+
+### Логіка
+
+* звичайний рядок
+* порожній
+* один символ
+
+```python
+def test_reverse_string():
+    assert reverse_string("hello") == "olleh"
+    assert reverse_string("") == ""
+    assert reverse_string("a") == "a"
+```
+
+---
+
+## ✅ 4. Тест для `find_min(nums)`
+
+### Логіка
+
+* кілька чисел
+* один елемент
+* від’ємні
+
+```python
+def test_find_min():
+    assert find_min([3, 1, 5, 2]) == 1
+    assert find_min([10]) == 10
+    assert find_min([-5, -1, -10]) == -10
+```
+
+---
+
+## ✅ 5. Тест для `contains_substring(s, sub)`
+
+### Логіка
+
+* підрядок є
+* підрядка нема
+* порожній підрядок (`"" in s` → True)
+
+```python
+def test_contains_substring():
+    assert contains_substring("hello world", "world") is True
+    assert contains_substring("hello world", "python") is False
+    assert contains_substring("hello", "") is True
+```
+
+---
+
+## ✅ 6. Тест для `factorial(n)`
+
+### Логіка
+
+* 0
+* 1
+* звичайне число
+
+```python
+def test_factorial():
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(5) == 120
+```
+
+(Тест на помилку ми зробимо трохи пізніше з `pytest.raises` 😉)
+
+---
+
+## ✅ 7. Тест для `divide(a, b)`
+
+⚠️ Тут **є виняток**, тому потрібен `pytest`
+
+```python
+import pytest
+```
+
+### Логіка
+
+* звичайне ділення
+* ділення на від’ємне
+* ділення на 0 → помилка
+
+```python
+def test_divide():
+    assert divide(10, 2) == 5
+    assert divide(10, -2) == -5
+
+    with pytest.raises(ValueError):
+        divide(10, 0)
+```
+
+📌 `with pytest.raises(...)`
+→ “Я очікую, що тут буде помилка”
+
+---
+
+## ✅ 8. Тест для `is_palindrome(s)`
+
+### Логіка
+
+* паліндром
+* не паліндром
+* порожній рядок (він вважається паліндромом)
+
+```python
+def test_is_palindrome():
+    assert is_palindrome("level") is True
+    assert is_palindrome("hello") is False
+    assert is_palindrome("") is True
+```
+
+---
+
+## ✅ 9. Тест для `sum_list(nums)`
+
+### Логіка
+
+* звичайний список
+* порожній список
+* від’ємні
+
+```python
+def test_sum_list():
+    assert sum_list([1, 2, 3]) == 6
+    assert sum_list([]) == 0
+    assert sum_list([-1, -2, 3]) == 0
+```
+
+---
+
+## ✅ 10. Тест для `to_upper(s)`
+
+### Логіка
+
+* звичайний рядок
+* вже великими
+* порожній
+
+```python
+def test_to_upper():
+    assert to_upper("hello") == "HELLO"
+    assert to_upper("HELLO") == "HELLO"
+    assert to_upper("") == ""
+```
+
+---
+
+## 🧠 ГОЛОВНЕ, що ти маєш винести
+
+### Перед кожним тестом запитуй себе:
+
+1. ✅ Нормальний випадок
+2. ⚠️ Крайній випадок
+3. ❓ “А що, якщо…?”
+
+І для кожного — **`assert`**
+
+---
+
+## 🚀 Хочеш наступний рівень?
+
+Можу:
+
+* переробити **1–2 тести на `@pytest.mark.parametrize`**
+* показати **як тестувати помилки правильно**
+* дати тобі **завдання, а ти напишеш тест, я перевірю**
+
+👉 Напиши, що робимо далі 👌
+
+'''
+
+
+
+
