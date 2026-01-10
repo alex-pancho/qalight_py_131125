@@ -45,24 +45,11 @@ def sum_numbers_in_list(string_list: list):
             # Якщо не можна перетворити на числа, додаємо повідомлення про помилку
             result.append("Не можу це зробити!")
     return result
-print(sum_numbers_in_list(["1,2,3", "4,0,6"]))
-print(sum_numbers_in_list(["1,2,3", "asas7,8,9", "4,0,6"]))
-print(sum_numbers_in_list(["1,2,3,4", 7]))
-print(sum_numbers_in_list([]))
-print(sum_numbers_in_list("21"))
-print("\nEnd")
 
 if __name__ == "__main__":
-    output = sum_numbers_in_list(["1,2,3", "4,0,6"])
-    print(output)
-
-    output = sum_numbers_in_list(["1,2,3", "4/0,6", "asas7,8,9"])
-    print(output)
-    """
-    sum_numbers_in_list(["1,2,3", "4,0,6"])  # [6, 10]
-    sum_numbers_in_list(["1,2,3", "asas7,8,9", "4,0,6"])  # [6, "Не можу це зробити!", 10]
-    sum_numbers_in_list(["1,2,3,4", 7])  # [10, "Не можу це зробити! AttributeError"]
-    sum_numbers_in_list([])  # ValueError
-    sum_numbers_in_list("21")  # ValueError
-    """
-
+    print(sum_numbers_in_list(["1,2,3", "4,0,6"]))
+    print(sum_numbers_in_list(["1,2,3", "asas7,8,9", "4,0,6"]))
+    print(sum_numbers_in_list(["1,2,3,4", 7]))
+    print(sum_numbers_in_list([]))
+    print(sum_numbers_in_list("21"))
+    print("\nEnd")
