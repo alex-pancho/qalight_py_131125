@@ -1,8 +1,6 @@
-"""
-Тести для файлу tasks.py
-Запуск: pytest test_tasks.py
-"""
+import pytest
 from functions_for_test import *
+
 
 """
 📝 Завдання 1. Перевірка додавання чисел 
@@ -10,9 +8,9 @@ from functions_for_test import *
 Створи тест, який перевіряє кілька випадків: додавання додатних, від’ємних і нуля.
 """
 def test_add():
-    # TODO: додай тести для функції add
-    pass
-
+    assert add(2, 3) == 5
+    assert add(-2, -3) == -5
+    assert add(5, 0) == 5
 
 """
 📝 Завдання 2. Перевірка парності 
@@ -20,9 +18,10 @@ def test_add():
 Напиши тести для кількох чисел: парних, непарних, від’ємних.
 """
 def test_is_even():
-    # TODO: додай тести для функції is_even
-    pass
-
+    assert is_even(2) is True
+    assert is_even(3) is False
+    assert is_even(-4) is True
+    assert is_even(-5) is False
 
 """
 📝 Завдання 3. Розворот рядка 
@@ -30,8 +29,9 @@ def test_is_even():
 Перевір: звичайний рядок, порожній рядок, рядок з одним символом.
 """
 def test_reverse_string():
-    # TODO: додай тести для функції reverse_string
-    pass
+    assert reverse_string("hello") == "olleh"
+    assert reverse_string("") == ""
+    assert reverse_string("a") == "a"
 
 
 """
@@ -40,9 +40,9 @@ def test_reverse_string():
 Протестуй для: звичайного списку, списку з одним елементом, списку з від’ємними числами.
 """
 def test_find_min():
-    # TODO: додай тести для функції find_min
-    pass
-
+    assert find_min([3, 1, 5]) == 1
+    assert find_min([7]) == 7
+    assert find_min([-5, -1, -10]) == -10
 
 """
 📝 Завдання 5. Перевірка підрядка 
@@ -50,8 +50,9 @@ def test_find_min():
 Протестуй випадки: підрядок є, підрядка нема, порожній підрядок.
 """
 def test_contains_substring():
-    # TODO: додай тести для функції contains_substring
-    pass
+    assert contains_substring("hello world", "world") is True
+    assert contains_substring("hello", "abc") is False
+    assert contains_substring("hello", "") is True
 
 
 """
@@ -60,8 +61,9 @@ def test_contains_substring():
 Протестуй: factorial(0), factorial(1), factorial(5).
 """
 def test_factorial():
-    # TODO: додай тести для функції factorial
-    pass
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(5) == 120
 
 
 """
@@ -70,9 +72,11 @@ def test_factorial():
 Перевір: звичайне ділення, ділення на від’ємне число, ділення на нуль (очікуваний ZeroDivisionError).
 """
 def test_divide():
-    # TODO: додай тести для функції divide
-    pass
+    assert divide(10, 2) == 5
+    assert divide(10, -2) == -5
 
+    with pytest.raises(ValueError):
+        divide(10, 0)
 
 """
 📝 Завдання 8. Паліндром 
@@ -80,8 +84,9 @@ def test_divide():
 Протестуй: паліндром, непаліндром, порожній рядок.
 """
 def test_is_palindrome():
-    # TODO: додай тести для функції is_palindrome
-    pass
+    assert is_palindrome("level") is True
+    assert is_palindrome("hello") is False
+    assert is_palindrome("") is True
 
 
 """
@@ -90,8 +95,9 @@ def test_is_palindrome():
 Протестуй: звичайний список, порожній список, список з від’ємними числами.
 """
 def test_sum_list():
-    # TODO: додай тести для функції sum_list
-    pass
+    assert sum_list([1, 2, 3]) == 6
+    assert sum_list([]) == 0
+    assert sum_list([-1, -2, 3]) == 0
 
 
 """
@@ -100,5 +106,6 @@ def test_sum_list():
 Протестуй: звичайний рядок, вже великими літерами, порожній рядок.
 """
 def test_to_upper():
-    # TODO: додай тести для функції to_upper
-    pass
+    assert to_upper("hello") == "HELLO"
+    assert to_upper("HELLO") == "HELLO"
+    assert to_upper("") == ""
