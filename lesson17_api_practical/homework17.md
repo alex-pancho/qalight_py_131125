@@ -5,3 +5,4 @@ BASED on: https://github.com/alex-pancho/car_open_api_tests
 1. Загорнути всі ендпоінти в class Python
 2. Cnтворити класс який буде читати ці ендпоінти 
 3. Створити тести
+
