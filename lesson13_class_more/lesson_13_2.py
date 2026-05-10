@@ -36,9 +36,6 @@ class Money():
     def amount(self):
         return self.__amount
 
-
-
-
 class UAH(Money):
 
     def __init__(self, amount: float) -> None:
