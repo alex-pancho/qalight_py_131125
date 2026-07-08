@@ -1,0 +1,172 @@
+{
+  "timestamp": "2026-03-05T17:32:14.978777",
+  "score": {
+    "correct": 18,
+    "total": 20,
+    "percentage": 90.0,
+    "grade": "⭐ ВІДМІННО",
+    "comment": "Ви чудово знаєте Git та GitHub! 🎉"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "statement": "Git - це централізована система контролю версій",
+      "correct_answer": false,
+      "user_answer": true,
+      "is_correct": false,
+      "explanation": "Git - це розподілена система контролю версій. Кожна робоча копія містить повну історію проекту."
+    },
+    {
+      "id": 2,
+      "statement": "Команда 'git init' створює новий репозиторій у поточній директорії",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Команда 'git init' ініціалізує новий Git-репозиторій у поточній папці, створюючи приховану директорію .git."
+    },
+    {
+      "id": 3,
+      "statement": "Файли у Git можуть перебувати тільки в двох станах: Modified та Committed",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "У Git файли можуть перебувати в трьох станах: Modified (змінений), Staged (підготовлений) та Committed (зафіксований)."
+    },
+    {
+      "id": 4,
+      "statement": "Команда 'git add' переміщує файли з Working Directory до Staging Area",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Команда 'git add' додає файли до Staging Area (область підготовки), готуючи їх для наступного коміту."
+    },
+    {
+      "id": 5,
+      "statement": "Команда 'git pull' еквівалентна виконанню 'git fetch' та 'git merge'",
+      "correct_answer": true,
+      "user_answer": false,
+      "is_correct": false,
+      "explanation": "Команда 'git pull' завантажує зміни з віддаленого репозиторію та автоматично об'єднує їх з поточною гілкою."
+    },
+    {
+      "id": 6,
+      "statement": "Fork на GitHub - це копія репозиторію у вашому власному акаунті",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Fork створює копію репозиторію у вашому GitHub акаунті, дозволяючи вам вносити зміни без впливу на оригінал."
+    },
+    {
+      "id": 7,
+      "statement": "Pull Request можна створити тільки з форку репозиторію і більше ніяк",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "Pull Request можна створити як з форку, так і з гілки в тому ж репозиторії (якщо у вас є права доступу)."
+    },
+    {
+      "id": 8,
+      "statement": "Команда 'git reset --hard HEAD~1' безповоротно видаляє всі зміни з останнього коміту",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Команда 'git reset --hard HEAD~1' видаляє останній коміт та всі зміни в робочій директорії. Це небезпечна операція."
+    },
+    {
+      "id": 9,
+      "statement": "Лише гілка 'main' або 'master' має завжди містити стабільний, готовий до випуску код",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "Хоча це хороша практика, це залежить від стратегії розробки команди. Не всі проекти дотримуються цього правила."
+    },
+    {
+      "id": 10,
+      "statement": "Конфлікти злиття виникають тоді і тільки коли два розробники змінюють один і той же файл",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "Конфлікти можуть виникати не тільки при зміні одного файлу, а й при різних операціях з файлами (видалення, переміщення тощо)."
+    },
+    {
+      "id": 11,
+      "statement": "Команда 'git commit --amend' крім того дозволяє змінити повідомлення останнього коміту",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Команда 'git commit --amend' дозволяє змінити повідомлення або додати файли до останнього коміту."
+    },
+    {
+      "id": 12,
+      "statement": "SHA-1 хеш кожного коміту унікальний в межах всіх Git-репозиторіїв світу",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "SHA-1 хеш кожного коміту унікальний завдяки включенню timestamp, автора, змісту та хешу батьківського коміту."
+    },
+    {
+      "id": 13,
+      "statement": "Команда 'git clone' завантажує тільки останню версію файлів проекту",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "Команда 'git clone' завантажує повну історію репозиторію з усіма комітами, гілками та тегами."
+    },
+    {
+      "id": 14,
+      "statement": "У Git можна створювати гілки без обмежень по кількості",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Git дозволяє створювати необмежену кількість гілок, і це одна з його переваг для паралельної розробки."
+    },
+    {
+      "id": 15,
+      "statement": "Команда 'git revert' видаляє коміт з історії",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "Команда 'git revert' створює новий коміт, який скасовує зміни попереднього коміту, не видаляючи його з історії."
+    },
+    {
+      "id": 16,
+      "statement": "GitHub Actions дозволяє автоматизувати процеси розробки",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "GitHub Actions - це платформа CI/CD, що дозволяє автоматизувати тестування, збірку та розгортання коду."
+    },
+    {
+      "id": 17,
+      "statement": "Файл .gitignore варто додавати до репозиторію",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Файл .gitignore варто додавати до репозиторію, щоб всі учасники проекту використовували однакові правила ігнорування файлів."
+    },
+    {
+      "id": 18,
+      "statement": "Команда 'git stash' тимчасово зберігає незафіксовані зміни",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Команда 'git stash' зберігає поточні зміни в стеку, дозволяючи перемкнутися на іншу гілку та повернутися пізніше."
+    },
+    {
+      "id": 19,
+      "statement": "Merge коміт завжди має двох батьків",
+      "correct_answer": true,
+      "user_answer": true,
+      "is_correct": true,
+      "explanation": "Merge коміт об'єднує дві гілки, тому він завжди має принаймні двох батьків - по одному з кожної гілки."
+    },
+    {
+      "id": 20,
+      "statement": "GitHub Desktop - це єдиний GUI клієнт для роботи з Git",
+      "correct_answer": false,
+      "user_answer": false,
+      "is_correct": true,
+      "explanation": "GitHub Desktop - це один з GUI клієнтів. Існує багато інших: GitKraken, SourceTree, TortoiseGit та інші."
+    }
+  ]
+}
