@@ -2,7 +2,9 @@
 Тести для файлу tasks.py
 Запуск: pytest test_tasks.py
 """
-from functions_for_test import *
+import pytest
+from functions_for_test import (add, is_even, reverse_string, find_min, contains_substring, factorial, divide,
+is_palindrome, sum_list, to_upper)
 
 """
 📝 Завдання 1. Перевірка додавання чисел 
@@ -11,8 +13,11 @@ from functions_for_test import *
 """
 def test_add():
     # TODO: додай тести для функції add
-    pass
-
+    # pass
+    assert add(2, 3) == 5
+    assert add(-2, -3) == -5
+    assert add(0, 5) == 5
+    assert add(0, 0) == 0
 
 """
 📝 Завдання 2. Перевірка парності 
@@ -21,8 +26,11 @@ def test_add():
 """
 def test_is_even():
     # TODO: додай тести для функції is_even
-    pass
-
+    # pass
+    assert is_even(4) is True
+    assert is_even(7) is False
+    assert is_even(-2) is True
+    assert is_even(-3) is False
 
 """
 📝 Завдання 3. Розворот рядка 
@@ -31,8 +39,11 @@ def test_is_even():
 """
 def test_reverse_string():
     # TODO: додай тести для функції reverse_string
-    pass
-
+    # pass
+    assert reverse_string("hello") == "olleh"
+    assert reverse_string("") == ""
+    assert reverse_string("a") == "a"
+    assert reverse_string("tenet") == "tenet"
 
 """
 📝 Завдання 4. Мінімум у списку 
@@ -41,8 +52,10 @@ def test_reverse_string():
 """
 def test_find_min():
     # TODO: додай тести для функції find_min
-    pass
-
+    # pass
+    assert find_min([3, 1, 5, 2]) == 1
+    assert find_min([8]) == 8
+    assert find_min([-5, -1, -10]) == -10
 
 """
 📝 Завдання 5. Перевірка підрядка 
@@ -51,8 +64,10 @@ def test_find_min():
 """
 def test_contains_substring():
     # TODO: додай тести для функції contains_substring
-    pass
-
+    # pass
+    assert contains_substring("hello world", "world") is True
+    assert contains_substring("hello world", "python") is False
+    assert contains_substring("hello", "") is True
 
 """
 📝 Завдання 6. Факторіал 
@@ -61,8 +76,12 @@ def test_contains_substring():
 """
 def test_factorial():
     # TODO: додай тести для функції factorial
-    pass
-
+    # pass
+    assert factorial(0) == 1
+    assert factorial(1) == 1
+    assert factorial(5) == 120
+    with pytest.raises(ValueError):
+        factorial(-5)
 
 """
 📝 Завдання 7. Ділення з винятком 
@@ -71,8 +90,11 @@ def test_factorial():
 """
 def test_divide():
     # TODO: додай тести для функції divide
-    pass
-
+    # pass
+    assert divide(10, 2) == 5
+    assert divide(10, -2) == -5
+    with pytest.raises(ValueError):
+        divide(10, 0)
 
 """
 📝 Завдання 8. Паліндром 
@@ -81,8 +103,10 @@ def test_divide():
 """
 def test_is_palindrome():
     # TODO: додай тести для функції is_palindrome
-    pass
-
+    # pass
+    assert is_palindrome("tenet") is True
+    assert is_palindrome("hello") is False
+    assert is_palindrome("") is True
 
 """
 📝 Завдання 9. Сума елементів списку 
@@ -91,8 +115,10 @@ def test_is_palindrome():
 """
 def test_sum_list():
     # TODO: додай тести для функції sum_list
-    pass
-
+    # pass
+    assert sum_list([1, 2, 3]) == 6
+    assert sum_list([]) == 0
+    assert sum_list([-1, -2, 3]) == 0
 
 """
 📝 Завдання 10. Конвертація в верхній регістр 
@@ -101,4 +127,7 @@ def test_sum_list():
 """
 def test_to_upper():
     # TODO: додай тести для функції to_upper
-    pass
+    # pass
+    assert to_upper("hello") == "HELLO"
+    assert to_upper("HELLO") == "HELLO"
+    assert to_upper("") == ""
